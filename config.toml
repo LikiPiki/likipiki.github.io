@@ -20,12 +20,12 @@ pygmentsCodefences = true
 enableEmoji = true
 
 # Missing translations will default to this content language
-defaultContentLanguage = "en"
+defaultContentLanguage = "ru"
 
 # About Widget config
 [about]
-title = "Likipiki"                            # default: .Site.Title
-description = "Да обо всем и не о чем"                      # default: .Site.Params.info.description
+title = "Likipiki"                           
+description = "Да обо всем и не о чем" 
 logo = "/images/logo.png"
 
 [params.info]
@@ -146,7 +146,7 @@ hrefTargetBlank = true
 
 [languages]
 # edit this block for your own language
-[languages.en]
+[languages.ru]
 lang = "ru"
 languageName = "Russian"
 weight = 1

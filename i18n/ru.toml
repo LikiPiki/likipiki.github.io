@@ -1,0 +1,155 @@
+[author]
+one = "Автор"
+other = "Авторы"
+
+[authorsAvatar]
+other = "{{ .Author }}'s avatar"
+
+[by]
+other = "by"
+
+[cancel]
+other = "Отмена"
+
+[cancelComment]
+other = "Отменить комментарий"
+
+[category]
+one = "Категория"
+other = "Категории"
+
+[comment]
+other = "Комментарии"
+
+[commentSubmissionErrorMessage]
+other = "Error occured. Couldn't submit your comment. Please try again. Thank You!"
+
+[commentSubmissionErrorTitle]
+other = "Yikes, Sorry!"
+
+[commentSubmissionSuccessMessage]
+other = "Your comment has been submitted. It will appear on this page shortly!"
+
+[commentSubmissionSuccessTitle]
+other = "Спасибо!"
+
+[commentsOnEntry]
+one = "Only {{ .Count }} comment on {{ .Title }}"
+other = "{{ .Count }} comments on {{ .Title }}"
+
+[contactViaEmail]
+other = "Contact via Email"
+
+[currentPage]
+other = "Текущая страница"
+
+[email]
+other = "E-mail"
+
+[gopher]
+other = "Gopher"
+
+[goHome]
+other = "На главную..."
+
+[lastUpdated]
+other = "Последние обновленные"
+
+[leaveAComment]
+other = "Leave a comment"
+
+[mainMenu]
+other = "Меню"
+
+[name]
+other = "Name"
+
+[next]
+other = "Следующий"
+
+[nextPage]
+other = "Следующая страница"
+
+[nextPost]
+other = "Следующая статья"
+
+[noTerm]
+other = "Not a single {{ .Term }}!"
+
+[ok]
+other = "OK"
+
+[openAccountInNewTab]
+other = "Open {{ .Platform }} account in new tab"
+
+[page]
+other = "Page"
+
+[previous]
+other = "Previous"
+
+[previousPage]
+other = "Previous page"
+
+[previousPost]
+other = "Previous post"
+
+[postedOn]
+other = "Posted on"
+
+[readingTime]
+one = "Одна минута"
+other = "{{ .Count }} минут чтения"
+
+[recentPosts]
+other = "Recent Posts"
+
+[reply]
+other = "Ответить"
+
+[replyToAuthor]
+other = "Ответ {{ .Author }}"
+
+[says]
+other = "says"
+
+[search]
+other = "Поиск"
+
+[searchResultEmpty]
+other = "Nothing found!"
+
+[searching]
+other = "Searching"
+
+[series]
+one = "Series"
+other = "Series"
+
+[sidebarMenu]
+other = "Sidebar Menu"
+
+[skipToContent]
+other = "Skip to Content"
+
+[skipToMainMenu]
+other = "Skip to Main Menu"
+
+[socialMenu]
+other = "Social Menu"
+
+[submitComment]
+other = "Отправить!"
+
+[tableOfContents]
+other = "Оглавление"
+
+[tag]
+one = "Тэг"
+other = "Тэги"
+
+[toggleSidebar]
+other = "Toggle Sidebar"
+
+[website]
+other = "Website"
