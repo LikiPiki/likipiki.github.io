@@ -102,7 +102,7 @@ one = "Одна минута"
 other = "{{ .Count }} минут чтения"
 
 [recentPosts]
-other = "Recent Posts"
+other = "Недавние посты"
 
 [reply]
 other = "Ответить"

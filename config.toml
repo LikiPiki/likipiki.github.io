@@ -135,11 +135,17 @@ tag = "tags"
 [permalinks]
 page = "/:slug/"
 
-[[menu.main]]
-name = "Посты"
-weight = -10
-identifier = "repository"
-url = "https://github.com/MunifTanjim/minimo"
+[menu]
+	[[menu.main]]
+	name = "Главная"
+	weight = -20
+	identifier = "home"
+	url = "/"
+	[[menu.main]]
+	name = "Посты"
+	weight = -10
+	identifier = "posts"
+	url = "/posts/"
 
 [blackfriday]
 hrefTargetBlank = true
