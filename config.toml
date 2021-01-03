@@ -9,7 +9,7 @@ theme = "minimo"
 disqusShortname = ""
 googleAnalytics = "UA-176281422-2"
 
-Paginate = 5
+Paginate = 7
 preserveTaxonomyNames = true
 
 enableRobotsTXT = true # generate robots.txt
@@ -40,8 +40,8 @@ gopher = "" # used in 404 template ( Generator: https://gopherize.me )
 
 [params.copyright]
 prefix = ""
-holder = "MunifTanjim"
-startYear = "2017"
+holder = "Likipiki"
+startYear = "2021"
 suffix = ""
 
 [params.settings]
