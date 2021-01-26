@@ -1,158 +1,56 @@
-baseURL = "https://www.likipiki.gitlab.com"
+baseURL = "https://likipiki.gitlab.io"
 title = "Likipiki"
 
 # for smart copyright line, leave this blank and check [params.copyright]
-copyright = "© 2020 формошлеп арт студия"
+copyright = "© 2021 формошлеп арт студия"
 
-theme = "minimo"
-
-disqusShortname = ""
-googleAnalytics = "UA-176281422-2"
-
-Paginate = 7
-preserveTaxonomyNames = true
-
-enableRobotsTXT = true # generate robots.txt
-
-# Syntax Highlighting ( https://gohugo.io/content-management/syntax-highlighting/ )
-pygmentsCodefences = true
-
-enableEmoji = true
+theme = "PaperMod"
 
 # Missing translations will default to this content language
 defaultContentLanguage = "ru"
 
-# About Widget config
-[about]
-title = "Likipiki"                           
-description = "Да обо всем и не о чем" 
-logo = "/images/logo.png"
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
 
-[params.info]
-description = "Сайт который не жалят пчелы"
-title404 = "Похоже тут ничего нету..."
+[params]
+env = "production"
+defaultTheme = "auto"
+yandexMetrika = "71539801"
+disableThemeToggle = false
+ShowReadingTime = true
+ShowShareButtons = true
+disableSpecial1stPost = false
+comments = false
+hidemeta = false
+showtoc = false
+tocopen = true
 
-[params.assets]
-favicon = "favicon.ico"
-customCSS = ["css/custom.css"]
-customJS = ["js/custom.js"]
-gopher = "" # used in 404 template ( Generator: https://gopherize.me )
-
-[params.copyright]
-prefix = ""
-holder = "Likipiki"
-startYear = "2021"
-suffix = ""
-
-[params.settings]
-# date & time format: https://golang.org/pkg/time/
-dateFormat = "2006, Jan 02"
-listDateFormat = "2006, Jan 02"
-archiveDateFormat = "Jan 02"
-hideEntryNavigation = ["page"] # boolean / array of sections
-hideEntryMeta = ["page"] # boolean / array of sections
-showReadingTime = true
-showLastmod = true
-taxonomyCloudShuffle = true
-accentColor = "#ffcd00"
-hideMainMenu = false
-
-[params.sidebar]
-enable = true
-
-[params.widgets]
-# header = ["breadcrumbs"]
-homepage = ["recent_posts"]
-sidebar = ["about","search","sidebar_menu","taxonomy_cloud"]
-footer = ["social_menu"]
-
-[params.opengraph.facebook]
-admins = [] # array of Facebook IDs
-appID = ""
-pageID = ""
-
-[params.opengraph.twitter]
-page = "" # Twitter page username
-
-[params.seo]
-# Title Separator: - – — · • * ⋆ | ~ « » < >
-titleSeparator = "•"
-
-[params.social]
-# codepen = "MunifTanjim"
-# email = "contact@example.com"
-# facebook = "MunifTanjim"
-github = "likipiki"
-gitlab = "likipiki"
-# instagram = "MunifTanjim"
-# linkedin = "muniftanjim"
-# twitter = "MunifTanjim"
-telegram = "likipiki"
-# google_scholar = "qc6CJjYAAAAJ"
-# youtube = "UCT-U0rNerYxItGcuoPX-WYA"
-
-[params.comments]
-enable = false
-
-# Isso: https://posativ.org/isso/
-[params.comments.isso]
-enable = false
-scriptSrc = "" # "https://isso.example.com/js/embed.min.js"
-dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author='true'"
-
-[params.comments.staticman]
-enable = true
-apiEndpoint = "https://api.staticman.net/v2/entry"
-maxDepth = 2
-username = "MunifTanjim"
-repository = "minimo"
-
-# Utterances: https://utteranc.es
-[params.comments.utterances]
-enable = false
-issueTerm = "pathname" # pathname / url / title / og:title / <string>
-label = ""
-theme = "github-light"
-
-[params.comments.utterances.github]
-username = "MunifTanjim"
-repository = "minimo"
-
-[params.search]
-client = "fuse" # algolia / fuse / lunr
-
-[params.search.algolia]
-appId = ""
-indexName = ""
-searchApiKey = ""
-
-[taxonomies]
-author = "authors"
-category = "categories"
-series = "series"
-tag = "tags"
-
-[permalinks]
-page = "/:slug/"
+[minify]
+disableXML = true
+minifyOutput = true
 
 [menu]
+    [[menu.main]]
+    name = "Посты"
+    weight = -30
+    identifier = "posts"
+    url = "/archives/"
 	[[menu.main]]
-	name = "Главная"
-	weight = -20
-	identifier = "home"
-	url = "/"
+	name = "Категории"
+	identifier = "categories"
+	url = "/categories/"
+    weight = -20
 	[[menu.main]]
-	name = "Посты"
-	weight = -10
-	identifier = "posts"
-	url = "/posts/"
-
-[blackfriday]
-hrefTargetBlank = true
+	name = "Тэги"
+	identifier = "tags"
+	url = "/tags/"
+    weight = -10
 
 [languages]
 # edit this block for your own language
-[languages.ru]
-lang = "ru"
-languageName = "Russian"
-weight = 1
+    [languages.ru]
+    lang = "ru"
+    languageName = "Russian"
+    weight = 1

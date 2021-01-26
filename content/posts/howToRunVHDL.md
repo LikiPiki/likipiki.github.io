@@ -3,8 +3,8 @@ title: "Запуск СБИС на сервере"
 date: 2020-12-30T20:52:39+03:00
 authors: ["likipiki"]
 tags: ["test"]
-toc: true
-draft: false
+ShowToc: true
+draft: true
 ---
 
 # Как запустить лабы на сервере
