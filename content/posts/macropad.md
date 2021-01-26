@@ -3,6 +3,7 @@ title: "Space Invaders macropad"
 date: 2021-01-26T20:52:39+03:00
 tags: ["keyboard", "QMK", "macropad"]
 author: ["Likipiki"]
+categories: ["keyboards"]
 ShowToc: false
 weight: 1
 cover:
