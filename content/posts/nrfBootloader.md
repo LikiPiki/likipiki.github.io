@@ -4,6 +4,7 @@ date: 2021-03-01T20:52:39.000+03:00
 tags:
 - keyboard
 - nrfmicro
+- ZMK
 author:
 - likipiki
 categories:
