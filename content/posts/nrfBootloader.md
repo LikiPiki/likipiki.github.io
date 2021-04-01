@@ -81,3 +81,16 @@ sudo dmesg | grep tty
 
 Для загрузки бутлоадера в NrfMicro нам нужен только GDB server. Поэтому дальше я
 буду использовать `/dev/ttyACM0`.
+
+Разблокируем загрузчик:
+```
+sudo arm-none-eabi-gdb --batch -ex "target extended-remote /dev/ttyACM0" -ex "mon swdp_scan" -ex "att 1" -ex "mon erase_mass"
+```
+Зашиваем бутлоадер:
+```
+sudo arm-none-eabi-gdb --batch -ex "target extended-remote /dev/ttyACM0" -ex "mon swdp_scan" -ex "file bootloader.hex" -ex "att 1" -ex "mon erase" -ex load
+```
+
+Если все сделано правильно, то можно перевоткнуть USB-C у прожоры и замкнуть
+пин RST на землю. После этого на компьютере появится Mass Storage Device
+в который можно будет заливать прошивку для клавиатуры.
