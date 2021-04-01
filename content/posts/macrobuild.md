@@ -4,7 +4,7 @@ title: "Macropad building guide"
 date: 2021-01-26T20:52:39+03:00
 tags: ["keyboard", "buildGuide", "macropad", "draft"]
 author: ["Likipiki"]
-draft: false
+draft: true
 ShowToc: false
 ---
 
