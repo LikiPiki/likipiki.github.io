@@ -86,4 +86,4 @@ Bus 001 Device 009: ID 1d50:6018 OpenMoko, Inc. Black Magic Debug Probe (Applica
 
     sudo arm-none-eabi-gdb --batch -ex "target extended-remote /dev/ttyACM0" -ex "mon swdp_scan" -ex "file bootloader.hex" -ex "att 1" -ex "mon erase" -ex load
 
-Если все сделано правильно, то можно перевоткнуть USB-C у прожоры и замкнуть пин RST на землю. После этого на компьютере появится Mass Storage Device в который можно будет заливать прошивку для клавиатуры.
+Если все сделано правильно, то можно перевоткнуть USB-C у прожоры и замкнуть два раза пин RST на землю. После этого на компьютере появится Mass Storage Device в который можно будет заливать прошивку для клавиатуры.
