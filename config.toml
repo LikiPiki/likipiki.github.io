@@ -21,6 +21,7 @@ yandexMetrika = "71539801"
 disableThemeToggle = false
 ShowReadingTime = true
 ShowShareButtons = true
+ShowPostNavLinks = true
 comments = false
 hidemeta = false
 showtoc = false

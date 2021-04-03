@@ -1,6 +1,7 @@
 ---
 title: Разблокировка загрузчика nRFMicro 1.4
 date: 2021-03-01T20:52:39.000+03:00
+description: "Разблокировка загрузчика nRFMicro 1.4 на Linux"
 tags:
 - keyboard
 - NRFMicro
