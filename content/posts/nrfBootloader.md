@@ -1,5 +1,5 @@
 ---
-title: Разблокировка загрузчика NRFMicro 1.4
+title: Разблокировка загрузчика nRFMicro 1.4
 date: 2021-03-01T20:52:39.000+03:00
 tags:
 - keyboard
@@ -31,7 +31,7 @@ Mac OS:
 ### Необходимые файлы
 
 1. Для Black Magic [`blackmagic_dfu.bin`](/posts/files/blackmagic_dfu.bin),  [`blackmagic.bin`](/posts/files/blackmagic.bin).
-2. Бутлоадер для NRF52840 [`bootloader.hex`](/posts/files/bootloader.hex).
+2. Бутлоадер для nRF52840 [`bootloader.hex`](/posts/files/bootloader.hex).
 
 Для удобства можно закинуть все файлы в одну папку, все последующие команды запускать из нее.
 
@@ -63,7 +63,7 @@ Bus 001 Device 009: ID 1d50:6018 OpenMoko, Inc. Black Magic Debug Probe (Applica
 ...
 ```
 
-### Разблокировка Загрузчика NRF52840
+### Разблокировка Загрузчика nRF52840
 
 Посмотрим порты, которые используются Black Magicом:
 
@@ -77,7 +77,7 @@ Bus 001 Device 009: ID 1d50:6018 OpenMoko, Inc. Black Magic Debug Probe (Applica
 * `ttyACM0` --- Black Magic GDB server
 * `ttyACM1` --- Black Magic UART Port
 
-Для загрузки бутлоадера в NrfMicro нам нужен только GDB server. Поэтому дальше я буду использовать `/dev/ttyACM0`.
+Для загрузки бутлоадера в nRFMicro нам нужен только GDB server. Поэтому дальше я буду использовать `/dev/ttyACM0`.
 
 Разблокируем загрузчик:
 
