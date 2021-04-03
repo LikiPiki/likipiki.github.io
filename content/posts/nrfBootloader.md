@@ -1,18 +1,19 @@
 ---
-title: NRF Micro bootloader unlock
+title: Разблокировка загрузчика NRFMicro 1.4
 date: 2021-03-01T20:52:39.000+03:00
 tags:
 - keyboard
-- nrfmicro
+- NRFMicro
 - ZMK
+- Linux
 author:
 - likipiki
 categories:
 - keyboards
 ShowToc: true
 cover:
-  image: "/posts/images/nrf.JPG"
-weight: "1"
+  image: "/posts/images/nrf.jpeg"
+weight: "0"
 
 ---
 ### Подготовка
@@ -73,7 +74,7 @@ Bus 001 Device 009: ID 1d50:6018 OpenMoko, Inc. Black Magic Debug Probe (Applica
 
 В последних подключенных устройствах мы увидим следующее:
 
-* `ttyACM0` --- Black Magic GDB server.
+* `ttyACM0` --- Black Magic GDB server
 * `ttyACM1` --- Black Magic UART Port
 
 Для загрузки бутлоадера в NrfMicro нам нужен только GDB server. Поэтому дальше я буду использовать `/dev/ttyACM0`.

@@ -2,7 +2,7 @@ baseURL = "https://likipiki.gitlab.io"
 title = "Likipiki"
 
 # for smart copyright line, leave this blank and check [params.copyright]
-copyright = "© 2021 формошлеп арт студия"
+copyright = "© 2021 Формошлеп Арт Студия"
 
 theme = "PaperMod"
 
@@ -21,7 +21,6 @@ yandexMetrika = "71539801"
 disableThemeToggle = false
 ShowReadingTime = true
 ShowShareButtons = true
-disableSpecial1stPost = false
 comments = false
 hidemeta = false
 showtoc = false
