@@ -100,3 +100,4 @@ Type-C. Если все сделано правильно, то можно пр�
 ## Ссылки
 
 * [Официальный репозиторий nRFMicro](https://github.com/joric/nrfmicro)
+* [Пайка nRFMicro с помощью фена](https://www.youtube.com/watch?v=HHN1oMOVxyI&ab_channel=Joric)
