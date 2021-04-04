@@ -13,7 +13,7 @@ categories:
 - keyboards
 ShowToc: true
 cover:
-  image: "/posts/images/nrf.jpeg"
+  image: "/posts/nrfBootloader/nrf.jpeg"
 editPost:
     URL: "https://gitlab.com/likipiki/likipiki.gitlab.io/-/tree/master/content/"
     Text: "Предложить изменения"
