@@ -14,7 +14,10 @@ categories:
 ShowToc: true
 cover:
   image: "/posts/images/nrf.jpeg"
-
+editPost:
+    URL: "https://gitlab.com/likipiki/likipiki.gitlab.io/-/tree/master/content/"
+    Text: "Предложить изменения"
+    appendFilePath: true
 ---
 ### Подготовка
 
@@ -78,6 +81,8 @@ Bus 001 Device 009: ID 1d50:6018 OpenMoko, Inc. Black Magic Debug Probe (Applica
 * `ttyACM1` --- Black Magic UART Port
 
 Для загрузки бутлоадера в nRFMicro нам нужен только GDB server. Поэтому дальше я буду использовать `/dev/ttyACM0`.
+
+Подключаем джамперы к `STM32F103C8T6` Black Magic. `D14` --- `SWD`, `A5` --- `CLK`. Вторые концы джамперов соединяем с соответствующими контактами на nRFMicro.
 
 Разблокируем загрузчик:
 
