@@ -1,7 +1,7 @@
 ---
 title: Разблокировка загрузчика nRFMicro 1.4
 date: 2021-03-01T20:52:39.000+03:00
-description: "Разблокировка загрузчика nRFMicro 1.4 на Linux"
+description: Разблокировка загрузчика nRFMicro 1.4 на Linux
 tags:
 - keyboard
 - NRFMicro
@@ -14,8 +14,8 @@ categories:
 ShowToc: true
 cover:
   image: "/posts/images/nrf.jpeg"
----
 
+---
 ### Подготовка
 
 Я использую linux поэтому все команды приведены для этой операционной системы. Для начала, установим все необходимые зависимости:
@@ -83,8 +83,35 @@ Bus 001 Device 009: ID 1d50:6018 OpenMoko, Inc. Black Magic Debug Probe (Applica
 
     sudo arm-none-eabi-gdb --batch -ex "target extended-remote /dev/ttyACM0" -ex "mon swdp_scan" -ex "att 1" -ex "mon erase_mass"
 
+    Target voltage: unknown
+    Available Targets:
+    No. Att Driver
+     1      Nordic nRF52 M3/M4
+     2      Nordic nRF52 Access Port
+    0x00000a60 in ?? ()
+    erase..
+    Error erasing flash with vFlashErase packet
+    Can't detach process.
+
 Зашиваем бутлоадер:
 
     sudo arm-none-eabi-gdb --batch -ex "target extended-remote /dev/ttyACM0" -ex "mon swdp_scan" -ex "file bootloader.hex" -ex "att 1" -ex "mon erase" -ex load
+
+    Target voltage: unknown
+    Available Targets:
+    No. Att Driver
+     1      Nordic nRF52 M3/M4
+     2      Nordic nRF52 Access Port
+    0xfffffffe in ?? ()
+    erase..
+    Loading section .sec1, size 0xb00 lma 0x0
+    Loading section .sec2, size 0xf000 lma 0x1000
+    Loading section .sec3, size 0x10000 lma 0x10000
+    Loading section .sec4, size 0x5de8 lma 0x20000
+    Loading section .sec5, size 0x70c8 lma 0xf4000
+    Loading section .sec6, size 0x8 lma 0x10001014
+    Start address 0x00000000, load size 182712
+    Transfer rate: 27 KB/sec, 966 bytes/write.
+    [Inferior 1 (Remote target) detached]
 
 Если все сделано правильно, то можно перевоткнуть USB-C у прожоры и замкнуть два раза пин RST на землю. После этого на компьютере появится Mass Storage Device в который можно будет заливать прошивку для клавиатуры.
