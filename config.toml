@@ -20,7 +20,7 @@ defaultTheme = "auto"
 yandexMetrika = "71539801"
 disableThemeToggle = false
 ShowReadingTime = true
-ShowShareButtons = true
+ShowShareButtons = false
 ShowPostNavLinks = true
 comments = false
 hidemeta = false
@@ -71,7 +71,7 @@ home = [
 
 [languages]
 # edit this block for your own language
-    [languages.ru]
+[languages.ru]
     lang = "ru"
     languageName = "Russian"
     weight = 1
