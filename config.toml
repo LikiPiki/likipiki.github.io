@@ -16,6 +16,13 @@ buildExpired = false
 
 [params]
 env = "production"
+description = "Likipiki blog"
+keywords = [
+    "Blog",
+    "Likipiki",
+    "Keyboards",
+    "nRFMicro"
+    ]
 defaultTheme = "auto"
 yandexMetrika = "71539801"
 disableThemeToggle = false
