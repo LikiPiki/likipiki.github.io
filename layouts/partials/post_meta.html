@@ -2,7 +2,8 @@
 
 {{- if not .Date.IsZero -}}
 {{- $month := index $.Site.Data.mois (printf "%d" .Date.Month) }}
-{{- $scratch.Add "meta" (slice (delimit (slice .Date.Day $month .Date.Year) " ")) }}
+{{- $date := printf "%d %s %d" .Date.Day $month .Date.Year }}
+{{- $scratch.Add "meta" (slice $date) }}
 {{- end }}
 
 {{- if (.Param "ShowReadingTime") -}}
@@ -10,7 +11,7 @@
 {{- end }}
 
 {{- with (partial "author.html" .) }}
-{{- $scratch.Add "meta" . }}
+{{- $scratch.Add "meta" (slice .) }}
 {{- end }}
 
 {{- with ($scratch.Get "meta") }}
