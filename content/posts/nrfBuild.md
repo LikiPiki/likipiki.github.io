@@ -3,7 +3,7 @@ title: Гайд по сборке nRFMicro 1.4
 date: 2021-03-03T20:52:39.000+03:00
 description: Подробный гайд с фотографиями по сборке nRFMicro 1.4
 tags:
-- keyboard
+- Keyboard
 - ZMK
 - nRFMicro
 author:

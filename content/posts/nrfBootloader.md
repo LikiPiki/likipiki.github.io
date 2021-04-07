@@ -3,7 +3,7 @@ title: Разблокировка загрузчика nRFMicro 1.4
 date: 2021-03-01T20:52:39.000+03:00
 description: Разблокировка загрузчика nRFMicro 1.4 на Linux
 tags:
-- keyboard
+- Keyboard
 - NRFMicro
 - ZMK
 - Linux
@@ -87,7 +87,7 @@ Bus 001 Device 009: ID 1d50:6018 OpenMoko, Inc. Black Magic Debug Probe (Applica
 Разблокируем загрузчик:
 
     sudo arm-none-eabi-gdb --batch -ex "target extended-remote /dev/ttyACM0" -ex "mon swdp_scan" -ex "att 1" -ex "mon erase_mass"
-
+    
     Target voltage: unknown
     Available Targets:
     No. Att Driver
@@ -101,7 +101,7 @@ Bus 001 Device 009: ID 1d50:6018 OpenMoko, Inc. Black Magic Debug Probe (Applica
 Зашиваем бутлоадер:
 
     sudo arm-none-eabi-gdb --batch -ex "target extended-remote /dev/ttyACM0" -ex "mon swdp_scan" -ex "file bootloader.hex" -ex "att 1" -ex "mon erase" -ex load
-
+    
     Target voltage: unknown
     Available Targets:
     No. Att Driver
