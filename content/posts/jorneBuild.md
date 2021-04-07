@@ -12,6 +12,8 @@ categories:
 - keyboards
 ShowToc: true
 math: true
+cover:
+  image: "/posts/jorneBuild/jorneCover.jpeg"
 editPost:
   URL: https://gitlab.com/likipiki/likipiki.gitlab.io/-/tree/master/content/
   Text: Предложить изменения
@@ -50,11 +52,19 @@ draft: true
 Диод --- это компонент, который имеет полярность. Пайка
 осуществляется черной полоской к стрелочке на шелкографии диода.
 
+![Позиционирование диодов](/posts/jorneBuild/diodePosition.jpeg)
+
 * SMD диоды просто паяются к квадратным падам.
 * Если у вас выводные диоды, то их нужно паять в сквозные отверстия, затем
   отрезать ножки.
 
-![Пайка диодов]()
+![Припаянные диоды](/posts/jorneBuild/diodesSoldered.jpeg)
+
+### OLED джамперы
+
+![Пайка OLED джамперов](/posts/jorneBuild/oled.jpeg)
+
+![Пайка OLED джамперов](/posts/jorneBuild/oledSoldered.jpeg)
 
 ### Светодиоды
 
@@ -66,8 +76,11 @@ draft: true
 * Только нижняя подсветка 12 светодиодов
 * Без подсветки
 
-![Пайка светодидов SK6812 Mini]()  
+![Пайка светодидов SK6812 Mini](/posts/jorneBuild/ledSoldered.jpeg)  
+
 Светодиоды нужно паять очень аккуратно и с небольшой температурой, их легко перегреть и тогда они не будут работать. Чтобы паять на довольно низкой температуре, вам необходим хороший припой. Я использую с содержанием олова 63%, это позволяет ему плавиться при 180 градусах, а паяю светодиоды на 230.
+
+![Пайка светодидов SK6812 Mini](/posts/jorneBuild/solderedLeds.jpeg)  
 
 ### Кнопка Reset
 
