@@ -19,8 +19,8 @@ build:
   - HUGO_ENV=staging
   - HUGO_VERSION=0.82
   preview_output_directory: public
-  preview_docker_image: forestryio/hugo:latest
-  mount_path: "/srv"
+  preview_docker_image: klakegg/hugo
+  mount_path: public
   working_dir: "."
   instant_preview_command: hugo server -D -E -F --renderToDisk -d public
 version: 0.79.0
