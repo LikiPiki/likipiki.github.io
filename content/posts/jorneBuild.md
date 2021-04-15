@@ -64,6 +64,8 @@ draft: true
 
 ### OLED джамперы
 
+Если вы будете использовать OLED экран то нужно запаять данные джамперы:
+
 ![Пайка OLED джамперов](/posts/jorneBuild/oled.jpeg)
 
 ![Пайка OLED джамперов](/posts/jorneBuild/oledSoldered.jpeg)
