@@ -18,7 +18,7 @@ editPost:
   URL: https://gitlab.com/likipiki/likipiki.gitlab.io/-/tree/master/content/
   Text: Предложить изменения
   appendFilePath: true
-draft: true
+draft: false
 
 ---
 ## Подготовка
