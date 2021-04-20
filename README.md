@@ -23,5 +23,12 @@ If you can contribute to my repository:
 3. Edit some content.
 4. Create pull-request.
 
+## Page creation
+
+Default archetype is [`archetype/default.md`](https://gitlab.com/likipiki/likipiki.gitlab.io/-/blob/master/archetypes/default.md)
+```
+hugo new posts/my-post.md
+```
+
 ---
 You can find me in telegram [t.me/likipiki](https://t.me/likipiki)
