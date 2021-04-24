@@ -29,7 +29,7 @@ Arch Linux:
 
 Mac OS:
 
-    brew install stlink arm-none-eabi-gdb
+    brew install stlink arm-none-eabi-gdb lsusb
 
 ### Необходимые файлы
 
@@ -53,19 +53,20 @@ Mac OS:
 ### Делаем из BluePill Blackmagic
 
 Подключаем ST-Link к BluePill, `boot0` ставит в положение `1`. И зашиваем два бинарника следующими командами:
-
-    st-flash write blackmagic_dfu.bin 0x08000000
-    st-flash write blackmagic.bin 0x08002000
-
+```bash
+st-flash write blackmagic_dfu.bin 0x08000000
+st-flash write blackmagic.bin 0x08002000
+```
 После успешной прошивки, необходимо переставить `boot0` в положение `0` воткнуть BluePill через USB в компьютер.
 
 Проверим что устройство появилось:
-
-    lsusb
+```
+lsusb
+```
 
 Black Magic должен появиться в списке USB устройств.
 
-```bash3
+```
 ...
 Bus 001 Device 009: ID 1d50:6018 OpenMoko, Inc. Black Magic Debug Probe (Application)
 ...
@@ -74,11 +75,14 @@ Bus 001 Device 009: ID 1d50:6018 OpenMoko, Inc. Black Magic Debug Probe (Applica
 ### Разблокировка Загрузчика nRF52840
 
 Посмотрим порты, которые используются Black Magicом:
+```bash
+sudo dmesg | grep tty
 
-    sudo dmesg | grep tty
-    
-    [ 6813.936071] cdc_acm 1-3:1.0: ttyACM0: USB ACM device
-    [ 6813.941697] cdc_acm 1-3:1.2: ttyACM1: USB ACM device
+[ 6813.936071] cdc_acm 1-3:1.0: ttyACM0: USB ACM device
+[ 6813.941697] cdc_acm 1-3:1.2: ttyACM1: USB ACM device
+```
+
+> Есть еще один способ посмотреть чем заняты порты `ls /dev/tty.*`
 
 В последних подключенных устройствах мы увидим следующее:
 
@@ -91,38 +95,42 @@ Bus 001 Device 009: ID 1d50:6018 OpenMoko, Inc. Black Magic Debug Probe (Applica
 
 Разблокируем загрузчик:
 
-    sudo arm-none-eabi-gdb --batch -ex "target extended-remote /dev/ttyACM0" -ex "mon swdp_scan" -ex "att 1" -ex "mon erase_mass"
-    
-    Target voltage: unknown
-    Available Targets:
-    No. Att Driver
-     1      Nordic nRF52 M3/M4
-     2      Nordic nRF52 Access Port
-    0x00000a60 in ?? ()
-    erase..
-    Error erasing flash with vFlashErase packet
-    Can't detach process.
+```bash
+sudo arm-none-eabi-gdb --batch -ex "target extended-remote /dev/ttyACM0" -ex "mon swdp_scan" -ex "att 1" -ex "mon erase_mass"
+
+Target voltage: unknown
+Available Targets:
+No. Att Driver
+ 1      Nordic nRF52 M3/M4
+ 2      Nordic nRF52 Access Port
+0x00000a60 in ?? ()
+erase..
+Error erasing flash with vFlashErase packet
+Can't detach process.
+```
 
 Зашиваем бутлоадер:
 
-    sudo arm-none-eabi-gdb --batch -ex "target extended-remote /dev/ttyACM0" -ex "mon swdp_scan" -ex "file bootloader.hex" -ex "att 1" -ex "mon erase" -ex load
-    
-    Target voltage: unknown
-    Available Targets:
-    No. Att Driver
-     1      Nordic nRF52 M3/M4
-     2      Nordic nRF52 Access Port
-    0xfffffffe in ?? ()
-    erase..
-    Loading section .sec1, size 0xb00 lma 0x0
-    Loading section .sec2, size 0xf000 lma 0x1000
-    Loading section .sec3, size 0x10000 lma 0x10000
-    Loading section .sec4, size 0x5de8 lma 0x20000
-    Loading section .sec5, size 0x70c8 lma 0xf4000
-    Loading section .sec6, size 0x8 lma 0x10001014
-    Start address 0x00000000, load size 182712
-    Transfer rate: 27 KB/sec, 966 bytes/write.
-    [Inferior 1 (Remote target) detached]
+```bash
+sudo arm-none-eabi-gdb --batch -ex "target extended-remote /dev/ttyACM0" -ex "mon swdp_scan" -ex "file bootloader.hex" -ex "att 1" -ex "mon erase" -ex load
+
+Target voltage: unknown
+Available Targets:
+No. Att Driver
+ 1      Nordic nRF52 M3/M4
+ 2      Nordic nRF52 Access Port
+0xfffffffe in ?? ()
+erase..
+Loading section .sec1, size 0xb00 lma 0x0
+Loading section .sec2, size 0xf000 lma 0x1000
+Loading section .sec3, size 0x10000 lma 0x10000
+Loading section .sec4, size 0x5de8 lma 0x20000
+Loading section .sec5, size 0x70c8 lma 0xf4000
+Loading section .sec6, size 0x8 lma 0x10001014
+Start address 0x00000000, load size 182712
+Transfer rate: 27 KB/sec, 966 bytes/write.
+[Inferior 1 (Remote target) detached]
+```
 
 Если все сделано правильно, то можно перевоткнуть USB-C у прожоры. После этого
 на компьютере появится Mass Storage Device в который можно будет заливать
