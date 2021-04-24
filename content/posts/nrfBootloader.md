@@ -24,13 +24,14 @@ editPost:
 Я использую linux поэтому все команды приведены для этой операционной системы. Для начала, установим все необходимые зависимости:
 
 Arch Linux:
-
-    sudo pacman -S stlink arm-none-eabi-gdb
+```
+sudo pacman -S stlink arm-none-eabi-gdb
+```
 
 Mac OS:
-
-    brew install stlink arm-none-eabi-gdb lsusb
-
+```
+brew install stlink arm-none-eabi-gdb lsusb
+```
 ### Необходимые файлы
 
 1. Для Black Magic [`blackmagic_dfu.bin`](/posts/files/blackmagic_dfu.bin),  [`blackmagic.bin`](/posts/files/blackmagic.bin).
@@ -135,3 +136,26 @@ Transfer rate: 27 KB/sec, 966 bytes/write.
 Если все сделано правильно, то можно перевоткнуть USB-C у прожоры. После этого
 на компьютере появится Mass Storage Device в который можно будет заливать
 прошивку для клавиатуры.
+
+### Проблемы и их решения
+
+> #### 1. Модуль не прошивается
+
+Если модуль не прошивается или не стирается бутлоадер, проверьте мультиметром
+плату на короткое замыкание. Между `GND` и `VCC` должно быть напряжение отличное
+от 0 вольт.
+
+Проверьте пайку контактов 37 -- `SWD`, 39 -- `SCL`. Это два вывода около пина `0.09`.
+
+![SWD пады](/posts/nrfBootloader/swdfix.png)
+
+> #### 2. Не работает OLED дисплей
+
+Скорее всего не допаяны пины шины `I2C`, это внутренние два пада (28, 30) на модуле.
+Пройдитесь хорошо по ним паяльником с флюсом, если у вас есть тонкое жало,
+можно залезть им в сквозное отверстие и хорошо прогреть.
+
+![I2C пады](/posts/nrfBootloader/i2cfix.png)
+
+### Ссылки
+- [Сборка nRFMicro 1.4]({{< ref "nrfBuild.md" >}})

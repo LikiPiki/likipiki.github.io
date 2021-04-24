@@ -30,5 +30,14 @@ Default archetype is [`archetype/default.md`](https://gitlab.com/likipiki/likipi
 hugo new posts/my-post.md
 ```
 
+## Update theme
+
+Update [PaperMod theme](https://github.com/adityatelange/hugo-PaperMod.git) to
+latest commit. Do it carefully, and fix all merge conflicts if need!
+
+```
+git submodule update --remote --merge
+```
+
 ---
 You can find me in telegram [t.me/likipiki](https://t.me/likipiki)
