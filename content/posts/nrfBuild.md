@@ -13,7 +13,6 @@ categories:
 ShowToc: true
 cover:
   image: "/posts/nrfBuild/mainPreview.jpeg"
-
 ---
 ## Подготовка
 
