@@ -15,24 +15,25 @@ buildFuture = false
 buildExpired = false
 
 [params]
-env = "production"
-description = "Likipiki blog"
-keywords = [
-    "Blog",
-    "Likipiki",
-    "Keyboards",
-    "nRFMicro"
-    ]
-defaultTheme = "auto"
-yandexMetrika = "71539801"
-disableThemeToggle = false
-ShowReadingTime = true
-ShowShareButtons = false
-ShowPostNavLinks = true
-comments = false
-hidemeta = false
-showtoc = false
-tocopen = true
+    env = "production"
+    description = "Likipiki blog"
+    keywords = [
+        "Blog",
+        "Likipiki",
+        "Keyboards",
+        "nRFMicro"
+        ]
+
+    defaultTheme = "auto"
+    yandexMetrika = "71539801"
+    disableThemeToggle = false
+    ShowReadingTime = true
+    ShowShareButtons = false
+    ShowPostNavLinks = true
+    comments = false
+    hidemeta = false
+    showtoc = false
+    tocopen = true
 
 [params.fuseOpts]
 	isCaseSensitive = false
@@ -49,32 +50,32 @@ tocopen = true
 	]
 
 [minify]
-disableXML = true
-minifyOutput = true
+    disableXML = true
+    minifyOutput = true
 
 [outputs]
-home = [
-  "HTML",
-  "RSS", 
-  "JSON"
-]
+    home = [
+      "HTML",
+      "RSS", 
+      "JSON"
+    ]
 
 [menu]
     [[menu.main]]
-    name = "Посты"
-    weight = -30
-    identifier = "posts"
-    url = "/archives/"
+        name = "Посты"
+        weight = -30
+        identifier = "posts"
+        url = "/archives/"
 	[[menu.main]]
-	name = "Тэги"
-	identifier = "tags"
-	url = "/tags/"
-    weight = -20
+        name = "Тэги"
+        identifier = "tags"
+        url = "/tags/"
+        weight = -20
 	[[menu.main]]
-	name = "Поиск"
-	identifier = "search"
-	url = "/search/"
-    weight = -10
+        name = "Поиск"
+        identifier = "search"
+        url = "/search/"
+        weight = -10
 
 [languages]
 # edit this block for your own language
