@@ -1,0 +1,5 @@
+{{- /* Misc */}}
+{{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
+{{- partial "yandexMetrika.html" . }}
+{{- end -}}
+
