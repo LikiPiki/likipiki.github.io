@@ -11,7 +11,6 @@ author:
 - likipiki
 ShowToc: true
 TocOpen: false
-weight: "100"
 draft: false
 ---
 # Сборка из официального репозитория
