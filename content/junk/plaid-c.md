@@ -34,6 +34,6 @@ draft: false
 
 | Название     | ссылка                                                                                                           |
 | ------------ | ---------------------------------------------------------------------------------------------------------------- |
-| Спейсер 10мм | [ссылка](https://aliexpress.ru/item/32974970926.html?sku_id=66700945882&spm=a2g2w.productlist.list.2.2d0d4613KzBpq8)       |
-| Винты М2 8мм | [ссылка](https://aliexpress.ru/item/32442183034.html?sku_id=66705581952&spm=a2g2w.productlist.list.16.484920bdFXWpNP)      |
-| Болт М2      | [ссылка](https://aliexpress.ru/item/32798773566.html?sku_id=12000015834876023&spm=a2g2w.productlist.list.7.4ab42a25MAzpxS) |
+| Спейсер 10мм | [ссылка](https://sl.aliexpress.ru/p?key=IKlwxez)       |
+| Винты М2 8мм | [ссылка](https://sl.aliexpress.ru/p?key=mWlwxZU)      |
+| Болт М2      | [ссылка](https://aliexpress.ru/item/32868247852.html?sku_id=12000025571837721&spm=a2g2w.productlist.list.3.eb0e26b3D993M1) |
