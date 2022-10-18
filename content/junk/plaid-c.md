@@ -1,15 +1,3 @@
----
-title: "Plaid C"
-date: 2022-10-13T23:37:59+03:00
-description: ""
-tags:
-- keyboard
-author:
-- likipiki
-ShowToc: true
-weight: "0"
-draft: false
----
 
 ### Компоненты
 | Компонент                | Ссылка                                                                                                                  |
