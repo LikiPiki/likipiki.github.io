@@ -18,7 +18,7 @@
   </h2>
   {{- range .Pages.GroupByDate "January" }}
   <div class="archive-month">
-      <h3 class="archive-month-header">{{index $.Site.Data.months .Key}}<sup class="archive-count">&nbsp;&nbsp;{{ len .Pages }}</sup></h3>
+      <h3 class="archive-month-header">{{ index hugo.Data.months (index .Pages 0).Date.Month.String }}<sup class="archive-count">&nbsp;&nbsp;{{ len .Pages }}</sup></h3>
     <div class="archive-posts">
       {{- range .Pages }}
       {{- if eq .Kind "page" }}

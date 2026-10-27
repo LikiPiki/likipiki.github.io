@@ -1,7 +1,7 @@
 {{- $scratch := newScratch }}
 
 {{- if not .Date.IsZero -}}
-{{- $month := index $.Site.Data.mois (printf "%d" .Date.Month) }}
+{{- $month := index hugo.Data.mois (printf "%d" .Date.Month) }}
 {{- $date := printf "%d %s %d" .Date.Day $month .Date.Year }}
 {{- $scratch.Add "meta" (slice $date) }}
 {{- end }}
@@ -15,5 +15,5 @@
 {{- end }}
 
 {{- with ($scratch.Get "meta") }}
-{{- delimit . "&nbsp;·&nbsp;" -}}
+{{- delimit . "\u00a0·\u00a0" -}}
 {{- end -}}

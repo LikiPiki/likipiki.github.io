@@ -15,6 +15,7 @@ buildFuture = false
 buildExpired = false
 
 [params]
+    mainSections = ["posts"]
     env = "production"
     description = "Likipiki blog"
     keywords = [
@@ -53,6 +54,9 @@ buildExpired = false
     disableXML = true
     minifyOutput = true
 
+[markup.highlight]
+    noClasses = false
+
 [outputs]
     home = [
       "HTML",
@@ -80,7 +84,6 @@ buildExpired = false
 [languages]
 # edit this block for your own language
 [languages.ru]
-    lang = "ru"
-    languageName = "Russian"
+    locale = "ru"
+    label = "Russian"
     weight = 1
-
