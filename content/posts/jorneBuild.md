@@ -11,7 +11,6 @@ author:
 categories:
 - keyboards
 ShowToc: true
-math: true
 cover:
   image: "/posts/jorneBuild/jorneCover.jpeg"
 editPost:
