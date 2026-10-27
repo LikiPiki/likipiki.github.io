@@ -39,9 +39,11 @@ hugo new content posts/my-post.md
 
 ```bash
 hugo --minify --panicOnWarning
+python3 scripts/check-site.py public
 ```
 
 The generated site is written to `public/`. Generated files are ignored by Git.
+The asset check validates exact URL casing, including on case-insensitive macOS.
 Pushes to `main` trigger the GitHub Actions workflow, which builds the site and
 deploys it to GitHub Pages. The workflow can also be started manually.
 

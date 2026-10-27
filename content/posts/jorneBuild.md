@@ -12,7 +12,7 @@ categories:
 - keyboards
 ShowToc: true
 cover:
-  image: "/posts/jorneBuild/jorneCover.jpeg"
+  image: "/posts/jornebuild/jorneCover.jpeg"
 editPost:
   URL: https://gitlab.com/likipiki/likipiki.gitlab.io/-/tree/master/content/
   Text: Предложить изменения
@@ -53,21 +53,21 @@ weight: 10
 Диод --- это компонент, который имеет полярность. Пайка
 осуществляется черной полоской к стрелочке на шелкографии диода.
 
-![Позиционирование диодов](/posts/jorneBuild/diodePosition.jpeg)
+![Позиционирование диодов](/posts/jornebuild/diodePosition.jpeg)
 
 * SMD диоды просто паяются к квадратным падам.
 * Если у вас выводные диоды, то их нужно паять в сквозные отверстия, затем
   отрезать ножки.
 
-![Припаянные диоды](/posts/jorneBuild/diodesSoldered.jpeg)
+![Припаянные диоды](/posts/jornebuild/diodesSoldered.jpeg)
 
 ### OLED джамперы
 
 Если вы будете использовать OLED экран то нужно запаять данные джамперы:
 
-![Пайка OLED джамперов](/posts/jorneBuild/oled.jpeg)
+![Пайка OLED джамперов](/posts/jornebuild/oled.jpeg)
 
-![Пайка OLED джамперов](/posts/jorneBuild/oledSoldered.jpeg)
+![Пайка OLED джамперов](/posts/jornebuild/oledSoldered.jpeg)
 
 ### Светодиоды
 
@@ -86,20 +86,20 @@ v3.0`](https://github.com/joric/jorne#jorne-cherry-30), где использу�
 * Только нижняя подсветка 12 светодиодов
 * Без подсветки
 
-![Пайка светодидов SK6812 Mini](/posts/jorneBuild/ledSoldered.jpeg)  
+![Пайка светодидов SK6812 Mini](/posts/jornebuild/ledSoldered.jpeg)
 
 Светодиоды нужно паять очень аккуратно и с небольшой температурой, их легко
 перегреть и тогда они не будут работать. Чтобы паять на довольно низкой
 температуре, вам необходим хороший припой. Я использую с содержанием олова 63%,
 это позволяет ему плавиться при 180 градусах, а паяю светодиоды на 230.
 
-![Пайка светодидов SK6812 Mini](/posts/jorneBuild/solderedLeds.jpeg)  
+![Пайка светодидов SK6812 Mini](/posts/jornebuild/solderedLeds.jpeg)
 
 Вот так паяются диоды, расположенные под каждым свитчем. Это очень долгое и
 трудоемкое занятие. Главное правильно их спозиционировать (большим квадратным
 падом диода к метке на шелкографии) и паять, не перегревая.
 
-![Пайка диодов под каждым свитчем](/posts/jorneBuild/perSwitchDiode.jpeg)
+![Пайка диодов под каждым свитчем](/posts/jornebuild/perSwitchDiode.jpeg)
 
 Фотография моей старой hot-swap жорне с промикрами.
 
@@ -108,15 +108,15 @@ v3.0`](https://github.com/joric/jorne#jorne-cherry-30), где использу�
 Если вы используете кнопку ресета как у меня, то ей надо немного выгнуть ножки
 пинцетом, чтобы она хорошо залезла в сквозные отверстия.
 
-![Кнопка reset](/posts/jorneBuild/resetButton.jpeg)
+![Кнопка reset](/posts/jornebuild/resetButton.jpeg)
 
 После пайки внимательно проверьте, чтобы припой затек во все сквозное отверстие.
 
-![Кнопка reset](/posts/jorneBuild/resetBack.jpeg)
+![Кнопка reset](/posts/jornebuild/resetBack.jpeg)
 
 ### Сокеты 3.5мм
 
-![Сокеты 3.5мм](/posts/jorneBuild/pinHeaders.jpeg)
+![Сокеты 3.5мм](/posts/jornebuild/pinHeaders.jpeg)
 
 Я использую именно эти сокеты, потому что они позволяют уменьшить высоту
 nRFMicro модуля и плотно поместить аккумуляторную батарею высотой 3мм под
@@ -125,7 +125,7 @@ nRFMicro модуля и плотно поместить аккумулятор�
 > Заметьте, сокеты вставляются не симметрично, сверху платы размечено
 > прямоугольником на шелкографии куда нужно вставлять гребенку сокетов.
 
-![Сокеты 3.5мм с диспплеем](/posts/jorneBuild/withLiPo.jpeg)
+![Сокеты 3.5мм с диспплеем](/posts/jornebuild/withLiPo.jpeg)
 
 Если вы используете дисплей, то его ножки надо будет укоротить в самом конце,
 под вашу высоту nRFMicro.
@@ -136,11 +136,11 @@ nRFMicro модуля и плотно поместить аккумулятор�
 сокетах как показано на картинке ниже (Важно вставлять пины до самого конца в
 сокеты):
 
-![nRFMicro в сокетах](/posts/jorneBuild/nRFMicroSocket.jpeg)
+![nRFMicro в сокетах](/posts/jornebuild/nRFMicroSocket.jpeg)
 
 Затем их можно откусить под самую плату и запаять. **Очень важно** использовать острые и хорошие кусачки.
 
-![nRFMicro с OLED дисплеем](/posts/jorneBuild/nRFWithOled.jpeg)
+![nRFMicro с OLED дисплеем](/posts/jornebuild/nRFWithOled.jpeg)
 
 В итоге у вас должен получиться примерно вот такой бутерброд.
 
@@ -151,14 +151,14 @@ nRFMicro модуля и плотно поместить аккумулятор�
 и простой акриловый прозрачный кейс. Вставляем все свитчи в плейт, а затем в
 печатную плату:
 
-![Свитчи в плейте](/posts/jorneBuild/swithesInPlate.jpeg)
+![Свитчи в плейте](/posts/jornebuild/swithesInPlate.jpeg)
 
 С обратной стороны это выглядит вот так, каждый свитч должен защелкнуться.
 Вставляем и запаиваем:
 
-![Переключатели вставлены в pcb](/posts/jorneBuild/preSolderedSwithes.jpeg)
+![Переключатели вставлены в pcb](/posts/jornebuild/preSolderedSwithes.jpeg)
 
-![Переключатели запаяны в pcb](/posts/jorneBuild/solderedSwithes.jpeg)
+![Переключатели запаяны в pcb](/posts/jornebuild/solderedSwithes.jpeg)
 
 После пайки нужно обязательно отмыть весь флюс. Для этого отлично подойдет
 изопропиловый спирт.
@@ -167,18 +167,18 @@ nRFMicro модуля и плотно поместить аккумулятор�
 В моем случае надо надеть защиту для OLED экранчиков, установить аккумуляторы
 под nRFMicro.
 
-![Jorne OLED safer](/posts/jorneBuild/jorneOledSaver.jpeg)
+![Jorne OLED safer](/posts/jornebuild/jorneOledSaver.jpeg)
 
 С обратной стороны приклеиваю обычные бампоны. Все плотно закручиваю.
 
-![Jorne acrillyc back](/posts/jorneBuild/jorneCaseBottom.jpeg)
+![Jorne acrillyc back](/posts/jornebuild/jorneCaseBottom.jpeg)
 
 ## Фото
-![Jorne peview](/posts/jorneBuild/jorneCover.jpeg)
+![Jorne peview](/posts/jornebuild/jorneCover.jpeg)
 
-![Jorne (one flipped)](/posts/jorneBuild/jorneWireless.jpeg)
+![Jorne (one flipped)](/posts/jornebuild/jorneWireless.jpeg)
 
-![Jorne Left](/posts/jorneBuild/jorneLeft.jpeg)
+![Jorne Left](/posts/jornebuild/jorneLeft.jpeg)
 
 
 ## Ссылки

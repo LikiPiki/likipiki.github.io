@@ -13,7 +13,7 @@ categories:
 - keyboards
 ShowToc: true
 cover:
-  image: "/posts/nrfBootloader/nrf.jpeg"
+  image: "/posts/nrfbootloader/nrf.jpeg"
 editPost:
     URL: "https://gitlab.com/likipiki/likipiki.gitlab.io/-/tree/master/content/"
     Text: "Предложить изменения"
@@ -148,7 +148,7 @@ Transfer rate: 27 KB/sec, 966 bytes/write.
 
 Проверьте пайку контактов 37 -- `SWD`, 39 -- `SCL`. Это два вывода около пина `0.09`.
 
-![SWD пады](/posts/nrfBootloader/swdfix.png)
+![SWD пады](/posts/nrfbootloader/swdfix.png)
 
 > #### 2. Не работает OLED дисплей
 
@@ -156,7 +156,7 @@ Transfer rate: 27 KB/sec, 966 bytes/write.
 Пройдитесь хорошо по ним паяльником с флюсом, если у вас есть тонкое жало,
 можно залезть им в сквозное отверстие и хорошо прогреть.
 
-![I2C пады](/posts/nrfBootloader/i2cfix.png)
+![I2C пады](/posts/nrfbootloader/i2cfix.png)
 
 ### Ссылки
 - [Сборка nRFMicro 1.4]({{< ref "nrfBuild.md" >}})
