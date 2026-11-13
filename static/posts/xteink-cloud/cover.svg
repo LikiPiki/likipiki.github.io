@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Экосистема чтения</title>
+  <desc id="desc">Xteink с CrossPoint и PocketBook с KOReader обмениваются прогрессом чтения.</desc>
+  <rect width="1200" height="630" rx="24" fill="#f0eee8"/>
+  <g font-family="system-ui, sans-serif" fill="#242a29">
+    <text x="64" y="78" font-size="17" letter-spacing="4">XTEINK + POCKETBOOK</text>
+    <text x="64" y="155" font-size="54" font-weight="700">Экосистема чтения</text>
+    <text x="64" y="211" font-size="22" fill="#56605c">Две читалки. Одна библиотека. Общее место чтения.</text>
+    <g stroke="#648278" stroke-width="3" fill="none">
+      <path d="M284 410H450m-166 0 12-9m-12 9 12 9"/>
+      <path d="M750 410H916l-12-9m12 9-12 9"/>
+    </g>
+    <rect x="450" y="370" width="300" height="80" rx="14" fill="#dbe5dd"/>
+    <text x="600" y="418" text-anchor="middle" font-size="23" font-weight="600">Синхронизация</text>
+    <rect x="133" y="310" width="151" height="213" rx="18" fill="#303b37"/>
+    <rect x="146" y="324" width="125" height="164" rx="5" fill="#fbfaf6"/>
+    <text x="208" y="385" text-anchor="middle" font-size="21" font-weight="700">Xteink</text>
+    <text x="208" y="415" text-anchor="middle" font-size="14" fill="#5c6660">CrossPoint</text>
+    <path d="M166 440H250M166 451H237M166 462H245" stroke="#bdc5ba" stroke-width="3"/>
+    <circle cx="188" cy="505" r="4" fill="#b3c2b7"/>
+    <circle cx="208" cy="505" r="4" fill="#b3c2b7"/>
+    <circle cx="228" cy="505" r="4" fill="#b3c2b7"/>
+    <rect x="916" y="287" width="178" height="253" rx="20" fill="#303b37"/>
+    <rect x="930" y="302" width="150" height="202" rx="5" fill="#fbfaf6"/>
+    <text x="1005" y="382" text-anchor="middle" font-size="20" font-weight="700">PocketBook</text>
+    <text x="1005" y="413" text-anchor="middle" font-size="16" fill="#5c6660">KOReader</text>
+    <path d="M951 444H1059M951 457H1040M951 470H1051" stroke="#bdc5ba" stroke-width="3"/>
+    <rect x="985" y="519" width="40" height="5" rx="2" fill="#b3c2b7"/>
+    <text x="64" y="587" font-size="17" fill="#667169">likipiki.ru</text>
+  </g>
+</svg>
