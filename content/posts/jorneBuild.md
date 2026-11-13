@@ -19,7 +19,6 @@ editPost:
   Text: Предложить изменения
   appendFilePath: true
 draft: false
-weight: 10
 ---
 ## Подготовка
 
