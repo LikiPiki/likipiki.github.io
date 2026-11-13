@@ -27,7 +27,7 @@ class AssetParser(HTMLParser):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("directory", nargs="?", default="public")
-    parser.add_argument("--base-url", default="https://likipiki.github.io/")
+    parser.add_argument("--base-url", default="https://likipiki.ru/")
     args = parser.parse_args()
     root = Path(args.directory)
     if not root.is_dir():

@@ -1,11 +1,11 @@
-# Likipiki Blog — [likipiki.github.io](https://likipiki.github.io/)
+# Likipiki Blog — [likipiki.ru](https://likipiki.ru/)
 
 My [Hugo](https://gohugo.io/) blog using the
 [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme.
 
 ## Requirements
 
-- [Hugo Extended 0.168.0](https://github.com/gohugoio/hugo/releases/tag/v0.168.0),
+- [Hugo Extended 0.169.0](https://github.com/gohugoio/hugo/releases/tag/v0.169.0),
   matching `HUGO_VERSION` in [the deployment workflow](.github/workflows/hugo.yml).
 - Git, including the PaperMod submodule pinned by this repository.
 
@@ -60,6 +60,17 @@ hugo --minify --panicOnWarning
 Review the theme changes and check the home page, posts, archive, search, code
 highlighting, and light/dark themes before committing the new submodule revision.
 The current theme requires Hugo 0.158.0 or newer.
+
+Поиск использует локальную копию Fuse.js 7.5.0 в `assets/js/fuse.basic.min.js`,
+которая переопределяет библиотеку темы. Для повторного получения этого файла:
+
+```bash
+python3 scripts/vendor-fuse.py
+```
+
+Скрипт проверяет SHA-512 npm-архива и оборачивает CommonJS-сборку для использования
+в браузере. При обновлении версии измените `VERSION` и `INTEGRITY` в скрипте,
+пересоздайте файл и проверьте поиск.
 
 Local template overrides live in `layouts/archives.html` and `layouts/_partials/`.
 They preserve Russian dates and month names and load Yandex Metrika using the
