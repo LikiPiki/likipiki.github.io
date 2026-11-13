@@ -13,7 +13,7 @@ ShowToc: true
 TocOpen: false
 draft: false
 cover:
-  image: "/posts/xteink-cloud/cover.svg"
+  image: "/posts/xteink-pocketbook-sync/cover.svg"
   alt: "Экосистема чтения: Xteink с CrossPoint и PocketBook с KOReader обмениваются прогрессом"
   relative: false
 ---
