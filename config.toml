@@ -17,7 +17,7 @@ buildExpired = false
 [params]
     mainSections = ["posts"]
     env = "production"
-    description = "Likipiki blog"
+    description = "Личный блог о том о сём"
     keywords = [
         "Blog",
         "Likipiki",

@@ -15,7 +15,7 @@ ShowToc: true
 cover:
   image: "/posts/nrfbootloader/nrf.jpeg"
 editPost:
-    URL: "https://gitlab.com/likipiki/likipiki.gitlab.io/-/tree/master/content/"
+    URL: "https://github.com/LikiPiki/likipiki.github.io/edit/main/content"
     Text: "Предложить изменения"
     appendFilePath: true
 ---

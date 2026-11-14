@@ -15,7 +15,7 @@ cover:
   image: "/posts/jornebuild/cover.png"
   alt: "Рисованная Jorne: две половинки с белыми и красными клавишами и OLED-экранами"
 editPost:
-  URL: https://gitlab.com/likipiki/likipiki.gitlab.io/-/tree/master/content/
+  URL: https://github.com/LikiPiki/likipiki.github.io/edit/main/content
   Text: Предложить изменения
   appendFilePath: true
 draft: false
