@@ -183,9 +183,9 @@ applications/
 
 ## А как тогда продолжать на Xteink
 
-Для этого используется **другая синхронизация**: встроенный в KOReader плагин [Progress sync](https://github.com/koreader/koreader/wiki/Progress-sync) и совместимый с ним механизм CrossPoint на Xteink. Этот плагин уже входит в KOReader, отдельно скачивать его не нужно.
+Для переноса позиции между устройствами мы подключили в KOReader плагин [Progress sync](https://github.com/koreader/koreader/wiki/Progress-sync) и настроили совместимую синхронизацию в CrossPoint на Xteink.
 
-Для этого я поднял [CrossPoint Sync](https://github.com/crosspoint-reader/crosspoint-sync) и подключил к нему обе читалки с одной учётной записью. Он хранит прогресс чтения: отправляешь позицию с одного устройства, получаешь на другом и продолжаешь книгу с того же места.
+Обе читалки я подключил к [CrossPoint Sync](https://github.com/crosspoint-reader/crosspoint-sync) с одной учётной записью. Отправляешь позицию с одного устройства, получаешь на другом и продолжаешь книгу с того же места.
 
 Для повторения есть [инструкция по подключению читалок к CrossPoint Sync](https://github.com/crosspoint-reader/crosspoint-sync#point-your-reader-at-it) и [настройка синхронизации в CrossPoint](https://github.com/crosspoint-reader/crosspoint-reader/blob/develop/USER_GUIDE.md#367-koreader-sync-quick-setup). В KOReader открываем книгу, затем меню синхронизации прогресса, указываем свой сервер и входим в учётную запись. На Xteink задаём тот же сервер и те же данные для входа.
 
@@ -195,8 +195,6 @@ applications/
 | --- | --- |
 | KOReader на PocketBook и CrossPoint на Xteink | Сервер синхронизации прогресса |
 | KOReader и родную библиотеку того же PocketBook | Плагин [PocketBook Sync](https://github.com/ckilb/pocketbooksync.koplugin) |
-
-Первый механизм помогает продолжить чтение на другом устройстве. Второй делает удобнее домашний экран одного устройства.
 
 Для межустройственной синхронизации есть важный нюанс: **на обе читалки лучше положить один и тот же итоговый EPUB**. Одинаковые название и обложка ещё не делают два независимо сконвертированных файла одним документом для синхронизации.
 
@@ -216,11 +214,7 @@ applications/
 
 ### CrossPoint Sync — место чтения между устройствами
 
-[**CrossPoint Sync**](https://github.com/crosspoint-reader/crosspoint-sync) отвечает за прогресс. К нему подключены CrossPoint на Xteink и KOReader на PocketBook с одной учётной записью. Почитал на одном устройстве, отправил позицию, получил её на другом — и продолжаешь.
-
-Как поднять свой экземпляр, описано в [разделе Run it](https://github.com/crosspoint-reader/crosspoint-sync#run-it), а параметры сервера — в [Configuration](https://github.com/crosspoint-reader/crosspoint-sync#configuration).
-
-Сам EPUB этот сервис не доставляет: на обеих читалках уже должна быть одна и та же книга. А плагин PocketBook Sync, о котором рассказывал выше, остаётся локальной интеграцией KOReader с домашним экраном PocketBook.
+Свой экземпляр [**CrossPoint Sync**](https://github.com/crosspoint-reader/crosspoint-sync) я установил на тот же VPS. Для повторения есть [инструкция по запуску](https://github.com/crosspoint-reader/crosspoint-sync#run-it) и [описание настроек](https://github.com/crosspoint-reader/crosspoint-sync#configuration).
 
 ### OPDS — каталог прямо в читалке
 
@@ -230,9 +224,9 @@ OPDS уже есть в **Calibre-Web Automated**, отдельно устана
 
 Как добавить каталог: [инструкция для KOReader](https://github.com/koreader/koreader/wiki/OPDS-support) и [настройка OPDS в CrossPoint](https://github.com/crosspoint-reader/crosspoint-reader/blob/develop/USER_GUIDE.md#365-opds-servers-multiple-libraries). Для Calibre-Web Automated адрес каталога обычно выглядит как `https://books.example.com/opds` — здесь нужно подставить адрес своей библиотеки.
 
-В итоге у каждой части своя задача: Calibre-Web Automated хранит книги, OPDS помогает доставить их на устройство, а CrossPoint Sync переносит место чтения. Если EPUB уже на читалке, для обмена прогрессом скачивать его заново не нужно.
+OPDS доставляет на читалку сам файл книги, а CrossPoint Sync передаёт позицию чтения. Поэтому EPUB можно и просто скопировать с компьютера — синхронизация прогресса продолжит работать.
 
-Для чтения ни одной из читалок сервер не обязателен — я собрал всё это для собственного удобства. Можно просто скопировать один готовый EPUB на оба устройства с компьютера: синхронизация прогресса от способа доставки файла не зависит.
+Для чтения ни одной из читалок сервер не обязателен — я собрал всё это для собственного удобства.
 
 ## Если что-то не появилось
 
